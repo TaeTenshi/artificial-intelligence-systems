@@ -85,7 +85,6 @@ for k in range(1, 9):
     except:
         s = np.nan
     scores_ext.append(s)
-    print(f"  K={k}: {s:.3f}" if not np.isnan(s) else f"  K={k}: не хватает данных")
 
 best_k = np.nanargmax(scores_ext) + 1
 print(f"Лучший K: {best_k}")

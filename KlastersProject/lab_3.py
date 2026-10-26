@@ -81,7 +81,7 @@ scores_ext = []
 for k in range(1, 9):
     try:
         s = cross_val_score(KNeighborsClassifier(k), X_tr, y_tr,
-                             cv=KFold(3, shuffle=True, random_state=42)).mean()
+                             cv=KFold(3, shuffle=True, random_state=20)).mean()
     except:
         s = np.nan
     scores_ext.append(s)
